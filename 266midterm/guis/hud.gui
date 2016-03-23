@@ -2146,7 +2146,7 @@ windowDef Desktop
 			rect	65,6,52,26
 			visible	1
 			forecolor	0.866,0.921,0.764,1
-			text	"gui::player_health"
+			text	"gui::player_cash"
 			textscale	0.5
 			font	"fonts/chain"
 			shear	0,-.22
@@ -2155,7 +2155,7 @@ windowDef Desktop
 
 			onTime 0 {
 				transition "forecolor" "$desktop::white" "$desktop::typecolor" "250" ;
-				transition "rect" "$d_health_amount::rect" "$health_amount::rect" "250" ;
+				transition "rect" "$d_cash_amount::rect" "$cash_amount::rect" "250" ;
 				transition "textscale" "0.6" "0.5" "250" ;
 				
 				transition "icon_health::matcolor" "$desktop::white" "$desktop::healthicon" "250" ;
@@ -2168,30 +2168,5 @@ windowDef Desktop
 			visible	0
 		}
 	}
-	windowDef health_amount
-	{
-		rect	256,429,52,26
-		visible	1
-		forecolor	0.866,0.921,0.764,1
-		text	"gui::player_health"
-		textscale	0.5
-		font	"fonts/chain"
-		shear	0,-.22
-		textalign	2
-		notime	1
-
-		onTime 0 {
-			transition "forecolor" "$desktop::white" "$desktop::typecolor" "250" ;
-			transition "rect" "$d_health_amount::rect" "$health_amount::rect" "250" ;
-			transition "textscale" "0.6" "0.5" "250" ;
-			
-			transition "icon_health::matcolor" "$desktop::white" "$desktop::healthicon" "250" ;
-		}
-
-	}
-	windowDef d_health_amount
-	{
-		rect	254,427,58,31
-		visible	0
-	}
+	
 }
